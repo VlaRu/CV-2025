@@ -7,6 +7,7 @@
 @import "./sass/project-section.scss";
 @import "./sass/skills.scss";
 @import "./sass/education.scss";
+@import "./sass/burger.scss";
 
 body {
   width: 100%;
@@ -23,10 +24,10 @@ body {
 }
 
 .main-section {
- height: 90vh;
+ height: 95vh;
  width: 100%;
  @include place(row,center,center);
- padding: 20px;
+ padding: 10px 20px;
  @media (max-width: $tablet-pro){
   height: auto;
   @include place(column,start,start);
@@ -38,7 +39,7 @@ body {
   width: 65%;
   border-radius: 65px 65px 0 180px;
   background: $main-col;
-  box-shadow: -15px 1px 20px 0px #168165;
+  box-shadow: -15px 1px 20px 0px #166681;
   margin-left: 40px;
   @media (max-width: $tablet-pro){
     width: 100vw;
@@ -50,6 +51,7 @@ body {
 .section {
   height: 80%;
   margin: 40px 40px 0 40px;
+  font-weight: 600;
   @media (max-width: $tablet){
     margin: 0 10px;
     height: auto;
@@ -60,13 +62,18 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 35px;
-  color: #1b443c;
+  background: linear-gradient(to right, #000, #166eda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section ul li {
   line-height: 1.5;
-  color: #fbfbfb;
   font-weight: 600;
+  /* background: linear-gradient(to top,#000, #20c6dc, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #000;
 }
 
 .none{
@@ -75,6 +82,8 @@ body {
 
 .about_me-text {
   margin: 40px;
-  color: #342e3c;
   font-weight: 600;
+  background: linear-gradient(to right,#65d0fe, #342e3c, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

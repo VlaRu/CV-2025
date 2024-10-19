@@ -1,19 +1,29 @@
 .title {
   font-size: 75px;
+  background: linear-gradient(to right, #fff, #166eda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
   position: absolute;
   top: 50%;
-  left: -250px;
+  left: -230px;
   transform: rotate(-90deg);
-  font-size: 55px;
+  font-size: 48px;
+
+  @extend %tplgradient-text;
   @media (max-width: $tablet-pro){
    left: -200px;
   }
   @media (max-width: $mobile){
-    top: 40%;
+    top: 45%;
   }
+}
+
+.subtitle-prof {
+  color: #166eda;
+  font-weight: 600;
 }
 
 .aside-section {
@@ -42,3 +52,4 @@
 .my-photo {
   border-radius: 100%;
 }
+
