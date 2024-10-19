@@ -4,6 +4,13 @@
   height: 70px;
   margin-top: 20px;
   @include place(row,center,center);
+  @media (max-width: $tablet-pro){
+    position: absolute;
+    top: 0;
+  }
+  @media (max-width: $mobile){
+    display: none;
+  }
 }
 
 .list-navigation{
@@ -13,14 +20,40 @@
   background-color: #ffffff4f;
   border-radius: 40px;
   li{
+    flex: 1;
     max-width: 150px;
     height: 70px;
     @include place(row,center,center);
     align-items: center;
-    /* @extend %tplborder-radius; */
+    font-weight: 600;
+    @extend %tplgradient-text;
+
     &:hover{
+    background: linear-gradient(to right,#055a62, #fff, #59aedb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-color: #00666833;
     cursor: pointer;
-    color: #000;
-  }}
+      &:first-child{
+        @extend %tplborder-radius;
+      }
+      &:last-child {
+        border-radius: 0 35px 35px 0;
+      }
+   }
+  }
+}
+
+.bg {
+  background: linear-gradient(to right,#055a62, #fff, #59aedb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:first-child {
+    @extend %tplborder-radius;
+
+  }
+  &:last-child {
+    border-radius: 0 35px 35px 0;
+  }
 }

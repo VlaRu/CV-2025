@@ -1,16 +1,12 @@
 $fz: 16px;
 $bg-black: #000;
 $main-text-col: #fff;
-$main-col: linear-gradient(
-  32deg,
-  rgba(36, 54, 49, 1) 0%,
-  hsl(164, 100%, 50%) 50%,
-  rgba(36, 54, 49, 1) 100%
-);
+$main-col: linear-gradient(to right,#fff, #59aedb, #055a62);
 $col-lg-green: #00ffbb;
 $hover-col: #227d64;
-$mobile: 365px;
+$mobile: 550px;
 $tablet: 768px;
+$tablet-pro: 950px;
 $trn: transform 0.3s ease;
 
 //@include fontz(px, 00);
@@ -27,10 +23,13 @@ $trn: transform 0.3s ease;
   align-content: $ac;
 }
 
-%tplborder {
-  border: 2px solid rgb(161, 212, 32);
+%tplgradient-text {
+  background: linear-gradient(to right,#fff, #59aedb, #055a62);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
 
 %tplborder-radius {
-  border-radius: 25px;
+  border-radius: 35px 0 0 35px;
 }
