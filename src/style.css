@@ -387,7 +387,8 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 .show-sertificate {
-  color: black;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.67);
 }
 .show-sertificate:hover {
   cursor: pointer;
