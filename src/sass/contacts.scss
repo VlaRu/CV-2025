@@ -1,0 +1,13 @@
+.contact_list-element {
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease;
+  margin-top: 20px;
+  &:hover {
+    color: #2c473f;
+  }
+}
+
+.icon-contact {
+  margin-right: 20px;
+}

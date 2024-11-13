@@ -1,0 +1,55 @@
+.title {
+  font-size: 75px;
+  background: linear-gradient(to right, #fff, #166eda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  position: absolute;
+  top: 50%;
+  left: -230px;
+  transform: rotate(-90deg);
+  font-size: 48px;
+
+  @extend %tplgradient-text;
+  @media (max-width: $tablet-pro){
+   left: -200px;
+  }
+  @media (max-width: $mobile){
+    top: 45%;
+  }
+}
+
+.subtitle-prof {
+  color: #166eda;
+  font-weight: 600;
+}
+
+.aside-section {
+  position: relative;
+  width: 35%;
+  background-color: $bg-black;
+  @include place(column, center, center);
+  align-items: center;
+  padding: 20px;
+  color: $col-lg-green;
+  @media (max-width: $tablet-pro){
+    width: 100vw;
+    height: 110vh;
+  }
+  @media (max-width: $mobile){
+    height: 80vh;
+    @include place(column, start, center);
+  }
+}
+
+.img-container {
+  @include place(row, center, center);
+  margin-top: 40px;
+}
+
+.my-photo {
+  border-radius: 100%;
+}
+
