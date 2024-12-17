@@ -47,11 +47,7 @@
             </ul>
           </nav>
           <div id="about" class="section-about section">
-            <h3>About me</h3>
-            <p class="about_me-text">I am motivated and aspirational Frontend Developer, with a big passion for working and
-              promotion in this fild. In my free time I like to learning something
-              new. I want to note perseverance, diligence, the desire to bring the
-              work started to the end. I like to try new technology and take a hard task
+            <p class="about_me-text">I am a motivated and aspirational Frontend Developer, with a big passion for working and promotion in this field. In my free time, I like to learn something new. I want to note perseverance, diligence, and desire to bring the work started to the end. I like to try new technology and take a hard task
             </p>
           </div>
           <section id="skills" class="section-skills section none">
@@ -59,31 +55,31 @@
             <nav>
               <ul class="list-skills">
                 <li class="list-element">JavaScript, ES6
-                  <input type="range" min="0" max="10" value="9" disabled>
+                  <input type="range" min="0" max="10" value="9" disabled class="input-range">
                 </li>
-                <li class="list-element">TS-beginner
-                  <input type="range" min="0" max="10" value="5" disabled>
+                <li class="list-element">TS
+                  <input type="range" min="0" max="10" value="5" disabled class="input-range">
                 </li>
-                <li class="list-element">React-beginner
-                  <input type="range" min="0" max="10" value="5" disabled>
+                <li class="list-element">React
+                  <input type="range" min="0" max="10" value="5" disabled class="input-range">
                 </li>
-                <li class="list-element">API- beginner
-                  <input type="range" min="0" max="10" value="5" disabled>
+                <li class="list-element">API
+                  <input type="range" min="0" max="10" value="5" disabled class="input-range">
                 </li>
                 <li class="list-element">Git
-                  <input type="range" min="0" max="10" value="7" disabled>
+                  <input type="range" min="0" max="10" value="7" disabled class="input-range">
                 </li>
                 <li class="list-element">Figma
-                  <input type="range" min="0" max="10" value="9" disabled>
+                  <input type="range" min="0" max="10" value="9" disabled class="input-range">
                 </li>
                 <li class="list-element">HTML/HTML5
-                  <input type="range" min="0" max="10" value="9" disabled>
+                  <input type="range" min="0" max="10" value="9" disabled class="input-range">
                 </li>
                 <li class="list-element">CSS/CSS3
-                  <input type="range" min="0" max="10" value="9" disabled>
+                  <input type="range" min="0" max="10" value="9" disabled class="input-range">
                 </li>
                 <li class="list-element">SCSS
-                  <input type="range" min="0" max="10" value="9" disabled>
+                  <input type="range" min="0" max="10" value="9" disabled class="input-range">
                 </li>
               </ul>
             </nav>
@@ -164,6 +160,7 @@
                 </div>
               </div>
             </div>
+            <input type="range" name="" id="range-slider" class="range-projects" min="0" max="6" value="1">
           </section>
           <section id="education" class="section-education section none">
             <h3>My courses</h3>
@@ -209,36 +206,26 @@
             </div>
           </section>
           <section id="lang" class="section-language section none">
-              <h3>English level</h3>
-              <ul class="list">
-                <li class="list-element">Speaking: A2
-                  <input type="range" min="0" max="4" value="2" disabled>
-                </li>
-                <li class="list-element">Writtening: B2
-                  <input type="range" min="0" max="4" value="2" disabled>
-                </li>
-                <li class="list-element">Listening: B2
-                  <input type="range" min="0" max="4" value="2" disabled>
-                </li>
-              </ul>
-              <h3>Spanish level</h3>
-              <ul class="list">
-                <li class="list-element">A2
-                  <input type="range" min="0" max="4" value="2" disabled>
-                </li>
-              </ul>
-              <h3>Polish level</h3>
-              <ul class="list">
-                <li class="list-element">B2
-                  <input type="range" min="0" max="4" value="2" disabled>
-                </li>
-              </ul>
-              <h3>Ukrainian/Russian level</h3>
-              <ul class="list">
-                <li class="list-element">Native
-                  <input type="range" min="0" max="4" value="2" disabled>
-                </li>
-              </ul>
+              <div class="list-element">
+                <label for="">English: B1</label>
+                <input type="range" min="0" max="4" value="2" disabled class="input-range">
+              </div>
+              <div class="list-element">A2
+                <label for="">Spanish: A2</label>
+                <input type="range" min="0" max="4" value="2" disabled class="input-range">
+              </div>
+              <div class="list-element">
+                <label for="">Polish: B2</label>
+                <input type="range" min="0" max="4" value="2" disabled class="input-range">
+              </div>
+              <div>
+                <label for="">Ukrainian: Native</label>
+                <input type="range" min="0" max="4" value="2" disabled class="input-range">
+              </div>
+              <div>
+                <label for="">Russian: Fluent</label>
+                <input type="range" min="0" max="4" value="2" disabled class="input-range">
+              </div>
           </section>
           <section id="contacts" class="section-contacts section none">
             <h3>Contacts</h3>
@@ -258,7 +245,7 @@
                 </li>
                 <li class="contact_list-element">
                   <img src="../assets/icons/tel-icon.png" alt="tel" width="50" height="50" class="icon-contact">
-                  <a href="tel:">tel/whatsApp: +48 786233571</a>
+                  <a href="tel:+48786233571">tel/whatsApp: +48 786233571</a>
                 </li>
               </ul>
             </nav>

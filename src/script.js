@@ -1,35 +1,49 @@
-import {navigation, burgerNav, navigationElements } from "./modules/navigation.js";
-import {moveRightSlide, moveLeftSlide} from "./modules/sliderProject.js";
-import {burgerMenu, toggleBurgerMenu} from "./modules/burger.js";
+import {
+  navigation,
+  burgerNav,
+  sectionNavigationElements,
+  currentSection
+} from "./modules/navigation.js";
+import { moveRightSlide, moveLeftSlide } from "./modules/sliderProject.js";
+import { burgerMenu, toggleBurgerMenu } from "./modules/burger.js";
 
 const prevButton = document.querySelector(".arrow-left");
 const nextButton = document.querySelector(".arrow-right");
 
+function showCurrentSection() {
+  sectionNavigationElements[currentSection].classList.remove('none')
+}
 
-function handleResize(){
+function handleResize() {
   if (window.innerWidth > 768) {
-    navigationElements.forEach(section => {
-      section.classList.add('none');
+    sectionNavigationElements.forEach((section) => {
+      section.classList.add("none");
     });
-  }else{
-    navigationElements.forEach(section => {
-      section.classList.remove('none');
+    showCurrentSection()
+  } else {
+    sectionNavigationElements.forEach((section) => {
+      section.classList.remove("none");
     });
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  navigation();
-  burgerNav()
-  window.addEventListener('resize', handleResize);
+document.addEventListener("DOMContentLoaded", () => {
+  showCurrentSection()
+  console.log(`currentSection:`, currentSection);
 
-  nextButton.addEventListener('click', () => {
+  navigation();
+  burgerNav();
+  window.addEventListener("resize", handleResize);
+
+  nextButton.addEventListener("click", () => {
     moveRightSlide();
   });
 
-  prevButton.addEventListener('click', () => {
+  prevButton.addEventListener("click", () => {
     moveLeftSlide();
   });
+  //startAnimationRange()
 });
 
-burgerMenu.addEventListener('click', toggleBurgerMenu);
+burgerMenu.addEventListener("click", toggleBurgerMenu);
+
