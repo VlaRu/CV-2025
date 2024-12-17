@@ -1,0 +1,35 @@
+$fz: 16px;
+$bg-black: #000;
+$main-text-col: #fff;
+$main-col: linear-gradient(to right,#fff, #59aedb, #055a62);
+$col-lg-green: #00ffbb;
+$hover-col: #227d64;
+$mobile: 550px;
+$tablet: 768px;
+$tablet-pro: 950px;
+$trn: transform 0.3s ease;
+
+//@include fontz(px, 00);
+@mixin fontz($f, $w) {
+  font-size: $f;
+  font-weight: $w;
+}
+
+//@include place(, , , );
+@mixin place($fd, $jc, $ac) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-content: $ac;
+}
+
+%tplgradient-text {
+  background: linear-gradient(to right,#fff, #59aedb, #055a62);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+%tplborder-radius {
+  border-radius: 35px 0 0 35px;
+}
