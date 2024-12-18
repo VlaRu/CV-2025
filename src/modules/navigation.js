@@ -35,6 +35,9 @@ export function burgerNav() {
     el.addEventListener("click", () => {
       sectionNavigationElements[i].classList.remove("none");
       currentSection = i;
+      if (sectionNavigationElements[i].classList.contains('section-language') || sectionNavigationElements[i].classList.contains('section-skills')){
+        startAnimationRange()
+      }
     });
   });
 }
