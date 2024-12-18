@@ -19,6 +19,9 @@
   align-items: center;
   background-color: #ffffff4f;
   border-radius: 40px;
+  @media (max-width: $tablet-pro) {
+    background-color: transparent;
+  }
   li{
     flex: 1;
     max-width: 150px;

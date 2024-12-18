@@ -8,6 +8,9 @@
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: background-size 1s ease-in-out;
+  @media (max-width: 1500px) and (min-width: $tablet-pro){
+    width: 50%;
+  }
   @media (max-width: $tablet) {
     width: 50%;
   }
@@ -32,13 +35,17 @@
 .range-projects {
   -webkit-appearance: none;
   height: 18px;
-  width: 100%;
+  width: 90%;
+  float: right;
   margin-top: 40px;
   background: rgba(255, 255, 255, 0.6);
   background-image: linear-gradient(#30c7cf, #171515);
   background-repeat: no-repeat;
   background-size: 1% 100%;
   transition: background-size 0.3s ease;
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
 }
 
 .range-projects::-webkit-slider-thumb {
