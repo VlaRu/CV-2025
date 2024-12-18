@@ -41,10 +41,23 @@ body {
   background: $main-col;
   box-shadow: -15px 1px 20px 0px #166681;
   margin-left: 40px;
+  animation: zoomIn 1s ease-in-out forwards;
   @media (max-width: $tablet-pro){
     width: 100vw;
     margin: 0 0 20px 0;
     border-radius: 0;
+    animation: none;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -65,14 +78,14 @@ body {
   background: linear-gradient(to right, #000, #166eda);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media (max-width: $mobile){
+    font-size: 22px;
+  }
 }
 
 .section ul li {
   line-height: 1.5;
   font-weight: 600;
-  /* background: linear-gradient(to top,#000, #20c6dc, #000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: #000;
 }
 
@@ -83,6 +96,7 @@ body {
 .about_me-text {
   margin: 40px;
   font-weight: 600;
+  font-size: 25px;
   background: linear-gradient(to right,#65d0fe, #342e3c, #000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

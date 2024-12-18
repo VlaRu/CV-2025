@@ -1,15 +1,19 @@
-input[type="range"] {
+.input-range {
   -webkit-appearance: none;
   width: 20%;
   height: 18px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
-  background-image: linear-gradient(#00ff1e, #ddff00);
-  background-size: 70% 100%;
+  background-image: linear-gradient(#30c7cf, #171515);
+  background-size: 0% 100%;
   background-repeat: no-repeat;
+  transition: background-size 1s ease-in-out;
+  @media (max-width: $tablet) {
+    width: 50%;
+  }
 }
 
-input[type="range"]::-webkit-slider-thumb {
+.input-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 20px;
   width: 20px;
@@ -18,9 +22,30 @@ input[type="range"]::-webkit-slider-thumb {
   transition: background .3s ease-in-out;
 }
 
-input[type=range]::-webkit-slider-runnable-track  {
+.input-range::-webkit-slider-runnable-track  {
   -webkit-appearance: none;
   box-shadow: none;
   border: none;
   background: transparent;
+}
+
+.range-projects {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 100%;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.6);
+  background-image: linear-gradient(#30c7cf, #171515);
+  background-repeat: no-repeat;
+  background-size: 1% 100%;
+  transition: background-size 0.3s ease;
+}
+
+.range-projects::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
 }
