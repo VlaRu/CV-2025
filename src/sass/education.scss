@@ -2,9 +2,17 @@
   position: relative;
 }
 
+.list-education {
+  @include place(row, center, center );
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .list_edu-element {
   margin-bottom: 20px;
-  color:  #20c6dc;
+  color:  #0c535d;
+  text-transform: uppercase;
 }
 
 .hover-image {

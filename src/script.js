@@ -2,7 +2,8 @@ import {
   navigation,
   burgerNav,
   sectionNavigationElements,
-  currentSection
+  currentSection,
+  startAnimationRange
 } from "./modules/navigation.js";
 import { moveRightSlide, moveLeftSlide } from "./modules/sliderProject.js";
 import { burgerMenu, toggleBurgerMenu } from "./modules/burger.js";
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navigation();
   burgerNav();
-  window.addEventListener("resize", handleResize);
+  window.addEventListener("resize", handleResize, startAnimationRange);
 
   nextButton.addEventListener("click", () => {
     moveRightSlide();
@@ -42,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
   prevButton.addEventListener("click", () => {
     moveLeftSlide();
   });
-  //startAnimationRange()
 });
 
 burgerMenu.addEventListener("click", toggleBurgerMenu);

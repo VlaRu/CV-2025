@@ -29,7 +29,7 @@ body {
  @include place(row,center,center);
  padding: 10px 20px;
  @media (max-width: $tablet-pro){
-  height: auto;
+  height: fit-content;
   @include place(column,start,start);
   padding: 0;
  }
@@ -69,12 +69,17 @@ body {
     margin: 0 10px;
     height: auto;
   }
+
+  @media (max-width: $mobile){
+    margin-top: 40px;
+  }
 }
 
 .section h3 {
   text-align: center;
   font-weight: 600;
   font-size: 35px;
+  text-transform: uppercase;
   background: linear-gradient(to right, #000, #166eda);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
