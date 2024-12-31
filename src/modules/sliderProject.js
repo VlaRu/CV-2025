@@ -19,30 +19,52 @@ export function moveLeftSlide() {
   updateSliderRange();
 }
 
-export function rangeSlide() {
-  sliderRange.addEventListener("input", (e) => {
-    const value = parseInt(e.target.value);
-
-    if (value > currentSlide) {
-      for (let i = currentSlide; i < value; i++) {
-        moveLeftSlide();
-      }
-    } else if (value < currentSlide) {
-      for (let i = currentSlide; i > value; i--) {
-        moveRightSlide();
-      }
-    }
-    const backgroundSize = ((value / totalSlides) * 100).toFixed(2);
-    sliderRange.style.backgroundSize = `${backgroundSize}% 100%`;
-
-    currentSlide = value;
-  });
-}
-
 function updateSliderRange() {
   sliderRange.value = currentSlide;
   const backgroundSize = ((currentSlide / totalSlides) * 100).toFixed(2);
   sliderRange.style.backgroundSize = `${backgroundSize}% 100%`;
+}
+
+function updateSlider(e){
+
+  const rect = sliderRange.getBoundingClientRect();
+  const offsetX = e.clientX - rect.left;
+  const value = Math.round((offsetX / rect.width) * (sliderRange.max - sliderRange.min)) + parseInt(sliderRange.min);
+
+  if (value > currentSlide) {
+    for (let i = currentSlide; i < value; i++) {
+      moveLeftSlide();
+    }
+  } else if (value < currentSlide) {
+    for (let i = currentSlide; i > value; i--) {
+      moveRightSlide();
+    }
+  }
+  const backgroundSize = ((value / totalSlides) * 100).toFixed(2);
+  sliderRange.style.backgroundSize = `${backgroundSize}% 100%`;
+
+  currentSlide = value;
+}
+
+export function rangeSlide() {
+
+  //sliderRange.addEventListener( "mousemove", updateSlider);
+  if (document.documentElement.clientWidth < 950) {
+    sliderRange.addEventListener("touchmove", (e) => {
+      const touch = e.touches[0];
+      updateSlider(touch.clientX);
+    });
+  } else {
+    sliderRange.addEventListener("mousemove", (e) => {
+      updateSlider(e);
+    });
+  }
+
+  window.addEventListener("resize", () => {
+    sliderRange.removeEventListener("mousemove", updateSlider);
+    sliderRange.removeEventListener("touchmove", updateSlider);
+    rangeSlide();
+  });
 }
 
 rangeSlide()
