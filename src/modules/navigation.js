@@ -30,6 +30,10 @@ export function navigation() {
   });
 }
 
+if (document.documentElement.clientWidth < 950){
+  startAnimationRange()
+}
+
 export function burgerNav() {
   burgerNavigation.forEach((el, i) => {
     el.addEventListener("click", () => {

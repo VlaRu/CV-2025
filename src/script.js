@@ -16,7 +16,7 @@ function showCurrentSection() {
 }
 
 function handleResize() {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 950) {
     sectionNavigationElements.forEach((section) => {
       section.classList.add("none");
     });
