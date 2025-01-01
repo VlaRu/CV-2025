@@ -47,24 +47,21 @@ function updateSlider(e){
 }
 
 export function rangeSlide() {
-
-  //sliderRange.addEventListener( "mousemove", updateSlider);
   if (document.documentElement.clientWidth < 950) {
     sliderRange.addEventListener("touchmove", (e) => {
       const touch = e.touches[0];
-      updateSlider(touch.clientX);
-    });
+      updateSlider(touch);
+    }, { passive: true });
   } else {
     sliderRange.addEventListener("mousemove", (e) => {
       updateSlider(e);
     });
   }
-
-  window.addEventListener("resize", () => {
-    sliderRange.removeEventListener("mousemove", updateSlider);
-    sliderRange.removeEventListener("touchmove", updateSlider);
-    rangeSlide();
-  });
 }
 
 rangeSlide()
+
+window.addEventListener("resize", () => {
+  sliderRange.removeEventListener("mousemove", updateSlider);
+  sliderRange.removeEventListener("touchmove", updateSlider);
+});

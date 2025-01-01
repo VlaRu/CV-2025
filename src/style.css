@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-.subtitle, .list-navigation li {
+.subtitle {
   background: linear-gradient(to right, #fff, #59aedb, #055a62);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -126,9 +126,12 @@ h1, h2, h3, h4, h5, h6 {
   align-content: center;
   align-items: center;
   font-weight: 600;
+  background: linear-gradient(to right, #fff, #00a6ff, #055a62);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .list-navigation li:hover {
-  background: linear-gradient(to right, #055a62, #fff, #59aedb);
+  background: linear-gradient(to right, #055a62, #fff, #00a6ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: rgba(0, 102, 104, 0.2);
@@ -248,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 18px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
-  background-image: linear-gradient(#30c7cf, #171515);
+  background-image: linear-gradient(#fff, #166eda);
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: background-size 1s ease-in-out;
@@ -283,11 +286,11 @@ h1, h2, h3, h4, h5, h6 {
 .range-projects {
   -webkit-appearance: none;
   height: 18px;
-  width: 90%;
+  width: 100%;
   float: right;
   margin-top: 40px;
   background: rgba(255, 255, 255, 0.6);
-  background-image: linear-gradient(#30c7cf, #171515);
+  background-image: linear-gradient(#fff, #166eda);
   background-repeat: no-repeat;
   background-size: 1% 100%;
   transition: background-size 0.3s ease;
@@ -395,9 +398,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 100px;
   cursor: pointer;
   transition: 0.5s ease;
+  color: rgba(255, 255, 255, 0.5019607843);
 }
 .arrow:hover {
-  fill: rgba(98, 152, 138, 0.9725490196);
+  fill: rgba(255, 255, 255, 0.8549019608);
+}
+@media (max-width: 550px) {
+  .arrow {
+    width: 30px;
+    height: 50px;
+  }
 }
 
 .arrow-left {
@@ -615,6 +625,7 @@ body {
 .main-content_section {
   width: 65%;
   border-radius: 65px 65px 0 180px;
+  background-image: url(../assets/images/cyber.png);
   background: linear-gradient(to right, #fff, #59aedb, #055a62);
   box-shadow: -15px 1px 20px 0px #166681;
   margin-left: 40px;
@@ -626,6 +637,22 @@ body {
     margin: 0 0 20px 0;
     border-radius: 0;
     animation: none;
+  }
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  border-radius: 65px 65px 0 180px;
+}
+@media (max-width: 950px) {
+  .overlay-image {
+    display: none;
   }
 }
 
@@ -646,13 +673,8 @@ body {
 }
 @media (max-width: 768px) {
   .section {
-    margin: 0 10px;
+    margin: 40px 10px;
     height: auto;
-  }
-}
-@media (max-width: 550px) {
-  .section {
-    margin-top: 40px;
   }
 }
 
@@ -685,9 +707,13 @@ body {
   margin: 40px;
   font-weight: 600;
   font-size: 25px;
-  background: linear-gradient(to right, #65d0fe, #342e3c, #000);
+  background: linear-gradient(to right, #00b3ff, #342e3c, #000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.section-language {
+  color: #166681;
 }
 
 /*# sourceMappingURL=style.css.map */

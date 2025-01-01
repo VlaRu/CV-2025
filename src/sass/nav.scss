@@ -29,10 +29,12 @@
     @include place(row,center,center);
     align-items: center;
     font-weight: 600;
-    @extend %tplgradient-text;
+    background: linear-gradient(to right,#fff, #00a6ff, #055a62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     &:hover{
-    background: linear-gradient(to right,#055a62, #fff, #59aedb);
+    background: linear-gradient(to right,#055a62, #fff, #00a6ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-color: #00666833;
