@@ -20,6 +20,7 @@ function handleResize() {
     sectionNavigationElements.forEach((section) => {
       section.classList.add("none");
     });
+    navigation();
     showCurrentSection()
   } else {
     sectionNavigationElements.forEach((section) => {
@@ -29,10 +30,8 @@ function handleResize() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  showCurrentSection()
-  console.log(`currentSection:`, currentSection);
-
-  navigation();
+  handleResize();
+  showCurrentSection();
   burgerNav();
   window.addEventListener("resize", handleResize, startAnimationRange);
 

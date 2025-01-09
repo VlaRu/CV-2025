@@ -3,8 +3,11 @@
   align-items: center;
   transition: 0.5s ease;
   margin-top: 20px;
+  cursor: pointer;
   &:hover {
-    color: #2c473f;
+    background: linear-gradient(to right,#055a62, #fff, #59aedb);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
   }
 }
 

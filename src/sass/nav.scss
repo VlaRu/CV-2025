@@ -24,17 +24,18 @@
   }
   li{
     flex: 1;
-    max-width: 150px;
+    max-width: fit-content;
     height: 70px;
     @include place(row,center,center);
     align-items: center;
     font-weight: 600;
-    background: linear-gradient(to right,#fff, #00a6ff, #055a62);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #000;
+    font-size: 16px;
+    font-family: "Cinzel", serif;
+    text-transform: uppercase;
 
     &:hover{
-    background: linear-gradient(to right,#055a62, #fff, #00a6ff);
+    background: linear-gradient(to right,#fff, #00a6ff, #055a62);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-color: #00666833;
@@ -45,6 +46,9 @@
       &:last-child {
         border-radius: 0 35px 35px 0;
       }
+   }
+   @media (max-width: $tablet-pro){
+    color: #fff;
    }
   }
 }

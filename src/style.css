@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .list-navigation li {
   flex: 1;
-  max-width: 150px;
+  max-width: fit-content;
   height: 70px;
   display: flex;
   flex-direction: row;
@@ -126,12 +126,13 @@ h1, h2, h3, h4, h5, h6 {
   align-content: center;
   align-items: center;
   font-weight: 600;
-  background: linear-gradient(to right, #fff, #00a6ff, #055a62);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000;
+  font-size: 16px;
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
 }
 .list-navigation li:hover {
-  background: linear-gradient(to right, #055a62, #fff, #00a6ff);
+  background: linear-gradient(to right, #fff, #00a6ff, #055a62);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: rgba(0, 102, 104, 0.2);
@@ -139,6 +140,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .list-navigation li:hover:last-child {
   border-radius: 0 35px 35px 0;
+}
+@media (max-width: 950px) {
+  .list-navigation li {
+    color: #fff;
+  }
 }
 
 .bg {
@@ -155,9 +161,12 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   transition: 0.5s ease;
   margin-top: 20px;
+  cursor: pointer;
 }
 .contact_list-element:hover {
-  color: #2c473f;
+  background: linear-gradient(to right, #055a62, #fff, #59aedb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .icon-contact {
@@ -251,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 18px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
-  background-image: linear-gradient(#fff, #166eda);
+  background-image: linear-gradient(#055a62, #fff, #59aedb);
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: background-size 1s ease-in-out;
@@ -275,6 +284,12 @@ h1, h2, h3, h4, h5, h6 {
   cursor: none;
   transition: background 0.3s ease-in-out;
 }
+@media (max-width: 550px) {
+  .input-range::-webkit-slider-thumb {
+    height: 1px;
+    width: 1px;
+  }
+}
 
 .input-range::-webkit-slider-runnable-track {
   -webkit-appearance: none;
@@ -290,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
   float: right;
   margin-top: 40px;
   background: rgba(255, 255, 255, 0.6);
-  background-image: linear-gradient(#fff, #166eda);
+  background-image: linear-gradient(#055a62, #fff, #59aedb);
   background-repeat: no-repeat;
   background-size: 1% 100%;
   transition: background-size 0.3s ease;
@@ -314,7 +329,6 @@ h1, h2, h3, h4, h5, h6 {
 .project-section {
   height: 80%;
   position: relative;
-  max-width: 950px;
   overflow: hidden;
   z-index: 1;
 }
@@ -323,6 +337,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .projects-container {
+  max-width: 700px;
   margin-top: 20px;
   display: flex;
   flex-direction: row;
@@ -332,6 +347,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project_card-wrapper {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -344,7 +360,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project_card-container {
-  width: 50%;
   height: 300px;
   background-color: hsl(0, 0%, 13%);
   display: flex;
@@ -352,6 +367,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: start;
   align-content: start;
   align-items: center;
+  box-sizing: content-box;
   margin: 0 10px;
   padding: 10px 5px 0 5px;
   border: 1px solid white;
@@ -379,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 650px) {
   .project-images {
-    width: 90vw;
+    width: 100vw;
   }
 }
 
@@ -649,6 +665,7 @@ body {
   object-fit: cover;
   opacity: 0.3;
   border-radius: 65px 65px 0 180px;
+  z-index: -1;
 }
 @media (max-width: 950px) {
   .overlay-image {
@@ -672,6 +689,11 @@ body {
   font-weight: 600;
 }
 @media (max-width: 768px) {
+  .section.section-about-me {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
   .section {
     margin: 40px 10px;
     height: auto;
@@ -680,12 +702,11 @@ body {
 
 .section h3 {
   text-align: center;
-  font-weight: 600;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-size: 35px;
   text-transform: uppercase;
-  background: linear-gradient(to right, #000, #166eda);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 550px) {
   .section h3 {
@@ -705,15 +726,22 @@ body {
 
 .about_me-text {
   margin: 40px;
+  font-family: "Gabriela", serif;
   font-weight: 600;
   font-size: 25px;
-  background: linear-gradient(to right, #00b3ff, #342e3c, #000);
+  background: linear-gradient(to right, #000, #342e3c, #04425c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 550px) {
+  .about_me-text {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+}
 
 .section-language {
-  color: #166681;
+  color: #052b38;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -60,6 +60,7 @@ body {
   object-fit: cover;
   opacity: 0.3;
   border-radius: 65px 65px 0 180px;
+  z-index: -1;
   @media (max-width: 950px) {
     display: none;
   }
@@ -80,6 +81,11 @@ body {
   height: 80%;
   margin: 40px 40px 0 40px;
   font-weight: 600;
+  &.section-about-me {
+    @media (max-width: $tablet){
+      margin-top: 20px;
+    }
+  }
   @media (max-width: $tablet){
     margin: 40px 10px;
     height: auto;
@@ -88,12 +94,11 @@ body {
 
 .section h3 {
   text-align: center;
-  font-weight: 600;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-size: 35px;
   text-transform: uppercase;
-  background: linear-gradient(to right, #000, #166eda);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   @media (max-width: $mobile){
     font-size: 22px;
   }
@@ -111,13 +116,18 @@ body {
 
 .about_me-text {
   margin: 40px;
+  font-family: "Gabriela", serif;
   font-weight: 600;
   font-size: 25px;
-  background: linear-gradient(to right,#00b3ff, #342e3c, #000);
+  background: linear-gradient(to right, #000, #342e3c, #04425c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media (max-width: $mobile) {
+    font-size: 20px;
+    margin: 0 10px;
+  }
 }
 
 .section-language {
-  color: #166681;
+  color: #052b38;
 }
