@@ -4,7 +4,7 @@
   height: 18px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
-  background-image: linear-gradient(#fff, #166eda);
+  background-image: linear-gradient(#055a62, #fff, #59aedb);
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: background-size 1s ease-in-out;
@@ -23,6 +23,10 @@
   background: transparent;
   cursor: none;
   transition: background .3s ease-in-out;
+  @media (max-width: $mobile) {
+    height: 1px;
+    width: 1px;
+  }
 }
 
 .input-range::-webkit-slider-runnable-track  {
@@ -39,7 +43,7 @@
   float: right;
   margin-top: 40px;
   background: rgba(255, 255, 255, 0.6);
-  background-image: linear-gradient(#fff, #166eda);
+  background-image: linear-gradient(#055a62, #fff, #59aedb);
   background-repeat: no-repeat;
   background-size: 1% 100%;
   transition: background-size 0.3s ease;

@@ -1,7 +1,6 @@
 .project-section{
   height: 80%;
   position: relative;
-  max-width: 950px;
   overflow: hidden;
   z-index: 1;
   &.section {
@@ -10,12 +9,14 @@
 }
 
 .projects-container {
+  max-width: 700px;
   margin-top: 20px;
   @include place(row, start, start);
   transition: $trn;
 }
 
 .project_card-wrapper {
+  width: fit-content;
   @include place(row, center, center);
   @media(max-width: 650px) {
     justify-content: start;
@@ -23,11 +24,11 @@
 }
 
 .project_card-container {
-  width: 50%;
   height: 300px;
   background-color: hsla(0,0%,13%,1);
   @include place(column, start, start);
   align-items: center;
+  box-sizing: content-box;
   margin: 0 10px;
   padding: 10px 5px 0 5px;
   border: 1px solid #ffff;
@@ -51,7 +52,7 @@
   width: 300px;
   height: 200px;
   @media(max-width: 650px) {
-    width: 90vw;
+    width: 100vw;
   }
 }
 
