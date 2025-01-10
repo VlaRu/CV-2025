@@ -325,6 +325,12 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
+@media (max-width: 550px) {
+  .range-projects::-webkit-slider-thumb {
+    height: 1px;
+    width: 1px;
+  }
+}
 
 .project-section {
   height: 80%;
