@@ -388,6 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   .project_card-container {
     width: 100%;
     margin: 0;
+    padding: 10px 0 0 0;
   }
   .project_card-container:hover {
     transform: scale(1);
