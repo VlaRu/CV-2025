@@ -122,9 +122,21 @@ body {
   background: linear-gradient(to right, #000, #342e3c, #04425c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  overflow: hidden; /* Ensure the animation works */
+  white-space: normal; /* Allow text wrapping */
+  animation: revealText 2s ease-in-out forwards; 
   @media (max-width: $mobile) {
     font-size: 20px;
     margin: 0 10px;
+  }
+}
+
+@keyframes revealText {
+  from {
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0); /* Fully clipped */
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Fully visible */
   }
 }
 

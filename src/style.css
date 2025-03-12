@@ -739,6 +739,9 @@ body {
   background: linear-gradient(to right, #000, #342e3c, #04425c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  overflow: hidden; /* Ensure the animation works */
+  white-space: normal; /* Allow text wrapping */
+  animation: revealText 2s ease-in-out forwards;
 }
 @media (max-width: 550px) {
   .about_me-text {
@@ -747,6 +750,14 @@ body {
   }
 }
 
+@keyframes revealText {
+  from {
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0); /* Fully clipped */
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Fully visible */
+  }
+}
 .section-language {
   color: #052b38;
 }
