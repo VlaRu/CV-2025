@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   .project_card-container {
     width: 100%;
     margin: 0;
-    padding: 10px 0 0 0;
+    padding: 10px 0 5px 0;
   }
   .project_card-container:hover {
     transform: scale(1);
@@ -410,6 +410,11 @@ h1, h2, h3, h4, h5, h6 {
   color: gray;
   cursor: pointer;
   font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.link-source:hover {
+  color: rgba(11, 11, 11, 0.5607843137);
 }
 
 .arrow-wrapper {
