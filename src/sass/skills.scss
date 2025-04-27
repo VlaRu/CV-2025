@@ -1,3 +1,13 @@
+.skills-container {
+  @include place(row, center, center );
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #ffffff86;
+  padding: 20px 10px;
+  border-radius: 0 ;
+}
+
 .list-skills {
   @media (max-width: 1500px) {
     display: grid;
@@ -12,16 +22,4 @@
     flex-direction: column;
   }
 
-}
-
-.list-element {
-  @media (max-width: 1500px) {
-  display: flex;
-  justify-content: end;
-  gap: 10px;
-  }
-
-  @media (max-width: $tablet-pro) {
-    justify-content: start;
-  }
 }

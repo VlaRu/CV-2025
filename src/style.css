@@ -461,6 +461,19 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 10px;
 }
 
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.5254901961);
+  padding: 20px 10px;
+  border-radius: 0;
+}
+
 @media (max-width: 1500px) {
   .list-skills {
     display: grid;
@@ -477,19 +490,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 1500px) {
-  .list-element {
-    display: flex;
-    justify-content: end;
-    gap: 10px;
-  }
-}
-@media (max-width: 950px) {
-  .list-element {
-    justify-content: start;
-  }
-}
-
 .section-education {
   position: relative;
 }
@@ -502,6 +502,8 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  background-color: rgba(255, 255, 255, 0.5254901961);
+  border-radius: 0 0 0 165px;
 }
 
 .list_edu-element {
