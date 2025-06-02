@@ -8,6 +8,7 @@ import {
 } from "./modules/navigation.js";
 import { moveRightSlide, moveLeftSlide } from "./modules/sliderProject.js";
 import { burgerMenu, toggleBurgerMenu } from "./modules/burger.js";
+import { generateProjectCards } from "./modules/projectGenerator.js";
 
 const prevButton = document.querySelector(".arrow-left");
 const nextButton = document.querySelector(".arrow-right");
@@ -31,6 +32,7 @@ function handleResize() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  generateProjectCards();
   handleResize();
   showCurrentSection();
   burgerNav();
@@ -43,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   prevButton.addEventListener("click", () => {
     moveLeftSlide();
   });
+
 });
 
 burgerMenu.addEventListener("click", toggleBurgerMenu);
