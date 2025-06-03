@@ -16,11 +16,14 @@ body {
   color: $main-text-col;
   @include fontz(22px, 400);
   align-content: center;
+  overflow-x: hidden;
 }
 
 .wrapper-container {
   background: $bg-black;
   @include place(row,center,center);
+  width: 100%;
+  max-width: 100%;
 }
 
 .main-section {
@@ -43,6 +46,7 @@ body {
   box-shadow: -15px 1px 20px 0px #166681;
   margin-left: 40px;
   animation: zoomIn 1s ease-in-out forwards;
+  box-sizing: border-box;
   @media (max-width: $tablet-pro){
     width: 100vw;
     margin: 0 0 20px 0;
