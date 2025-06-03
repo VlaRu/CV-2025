@@ -12,7 +12,7 @@ const projectsData = [
       'https://img.stackshare.io/service/3337/Q4L7Jncy.jpg'
     ],
     sourceLink: 'https://github.com/RS-Tech-Artisans/eCommerce-React',
-    liveLink: 'https://vladislavak.github.io/E-Commerce/'
+    liveLink: 'https://github.com/RS-Tech-Artisans/eCommerce-React'
   },
   {
     id: 2,
@@ -24,8 +24,8 @@ const projectsData = [
       'https://cdn.iconscout.com/icon/free/png-256/free-css3-11-1175239.png?f=webp&w=256',
       'https://cdn.iconscout.com/icon/free/png-256/free-javascript-1-225993.png?f=webp&w=256'
     ],
-    sourceLink: 'https://github.com/VladislavaK/Pokemon-Game',
-    liveLink: 'https://vladislavak.github.io/Pokemon-Game/'
+    sourceLink: 'https://github.com/VlaRu/React-Pokemon-API/tree/app-state-management',
+    liveLink: 'https://react-ts-pokemon.netlify.app'
   },
   {
     id: 3,
@@ -38,8 +38,8 @@ const projectsData = [
       'https://cdn.iconscout.com/icon/free/png-256/free-javascript-1-225993.png?f=webp&w=256',
       'https://cdn.iconscout.com/icon/free/png-256/free-api-1-1175127.png?f=webp&w=256'
     ],
-    sourceLink: 'https://github.com/VladislavaK/Weather-App',
-    liveLink: 'https://vladislavak.github.io/Weather-App/'
+    sourceLink: 'https://github.com/VlaRu/forecast-weather',
+    liveLink: 'https://weather-forecast-fun.netlify.app/'
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const projectsData = [
       'https://cdn.iconscout.com/icon/free/png-256/free-css3-11-1175239.png?f=webp&w=256',
       'https://cdn.iconscout.com/icon/free/png-256/free-javascript-1-225993.png?f=webp&w=256'
     ],
-    sourceLink: 'https://github.com/VladislavaK/Todo-List',
+    sourceLink: 'https://github.com/VlaRu/frontend-challenge',
     liveLink: 'https://vladislavak.github.io/Todo-List/'
   },
   {
@@ -65,8 +65,8 @@ const projectsData = [
       'https://cdn.iconscout.com/icon/free/png-256/free-javascript-1-225993.png?f=webp&w=256',
       'https://cdn.iconscout.com/icon/free/png-256/free-react-4-1175110.png?f=webp&w=256'
     ],
-    sourceLink: 'https://github.com/VladislavaK/Travel-Blog',
-    liveLink: 'https://vladislavak.github.io/Travel-Blog/'
+    sourceLink: 'https://github.com/VlaRu/forecast-weather',
+    liveLink: 'https://vlaru.github.io/RSS_stage1-2/coffee-house/pages/home/home.html'
   },
   {
     id: 6,
@@ -78,8 +78,8 @@ const projectsData = [
       'https://cdn.iconscout.com/icon/free/png-256/free-css3-11-1175239.png?f=webp&w=256',
       'https://cdn.iconscout.com/icon/free/png-256/free-javascript-1-225993.png?f=webp&w=256'
     ],
-    sourceLink: 'https://github.com/VladislavaK/Coffee-House',
-    liveLink: 'https://vladislavak.github.io/Coffee-House/'
+    sourceLink: 'https://github.com/VlaRu/RSS_stage1-2/tree/coffee-house-week3',
+    liveLink: 'https://vlaru.github.io/RSS_stage1-2/coffee-house/pages/home/home.html'
   },
   {
     id: 7,
@@ -91,8 +91,48 @@ const projectsData = [
       'https://cdn.iconscout.com/icon/free/png-256/free-css3-11-1175239.png?f=webp&w=256',
       'https://cdn.iconscout.com/icon/free/png-256/free-javascript-1-225993.png?f=webp&w=256'
     ],
-    sourceLink: 'https://github.com/VladislavaK/SMM-Landing',
-    liveLink: 'https://vladislavak.github.io/SMM-Landing/'
+    sourceLink: 'https://github.com/VlaRu/smm-landing',
+    liveLink: 'https://start-in-beauty.netlify.app/'
+  },
+  {
+    id: 8,
+    title: 'SongBird Game',
+    description: 'An interactive bird song recognition game.',
+    projectImage: 'assets/images/song-bird.png',
+    technologies: [
+      'https://cdn.iconscout.com/icon/free/png-256/free-javascript-2038874-1720087.png?f=webp&w=256',
+      'https://cdn.iconscout.com/icon/free/png-256/free-css-38-226095.png?f=webp&w=256',
+      'https://cdn.iconscout.com/icon/free/png-256/free-html-59-225995.png?f=webp&w=256'
+    ],
+    sourceLink: 'https://github.com/rolling-scopes-school/vlaru-JSFE2022Q3/tree/songbird',
+    liveLink: 'https://rolling-scopes-school.github.io/vlaru-JSFE2022Q3/songbird/main.html'
+  },
+  {
+    id: 9,
+    title: 'Hangman Game',
+    description: 'Classic hangman word guessing game.',
+    projectImage: 'assets/images/hangman.jpg',
+    technologies: [
+      'https://cdn.iconscout.com/icon/free/png-256/free-javascript-2038874-1720087.png?f=webp&w=256',
+      'https://cdn.iconscout.com/icon/free/png-256/free-node-6-226036.png?f=webp&w=256'
+    ],
+    sourceLink: 'https://github.com/rolling-scopes-school/tasks/blob/master/stage1/tasks/hangman/README.md',
+    liveLink: 'https://rolling-scopes-school.github.io/vlaru-JSFE2023Q4/hangman/index.html'
+  },
+  {
+    id: 10,
+    title: 'Nonogram Game',
+    description: 'A puzzle game where you create pictures by filling in squares.',
+    projectImage: 'assets/images/nonogram.png',
+    technologies: [
+      'https://cdn.iconscout.com/icon/free/png-256/free-javascript-2038874-1720087.png?f=webp&w=256',
+      'https://cdn.iconscout.com/icon/free/png-256/free-node-6-226036.png?f=webp&w=256',
+      'https://cdn.iconscout.com/icon/free/png-256/free-webpack-2-1174981.png?f=webp&w=256',
+      'https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg',
+      'https://img.stackshare.io/service/3337/Q4L7Jncy.jpg'
+    ],
+    sourceLink: 'https://github.com/VlaRu/RSS_stage1-2/blob/nonograms/README.md',
+    liveLink: 'https://vlaru.github.io/RSS_stage1-2/nonograms/'
   }
 ];
 

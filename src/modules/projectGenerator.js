@@ -13,7 +13,7 @@ export function generateProjectCards() {
     projectCard.className = 'project_card-container';
     
     projectCard.innerHTML = `
-      <a href="${project.sourceLink}" target="_blank">
+      <a href="${project.liveLink}" target="_blank">
         <img src="${project.projectImage}" alt="${project.title}" class="project-images">
       </a>
       <div class="technology">
