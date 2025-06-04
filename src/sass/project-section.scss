@@ -4,7 +4,7 @@
 .project-section{
   height: 80%;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: 1;
   &.section {
     width: auto;
@@ -26,7 +26,7 @@
   box-sizing: border-box;
   @include place(row, center, center);
   @media(max-width: 550px) {
-    overflow: hidden;
+    overflow-x: hidden;
     justify-content: start;
     width: 100vw;
   }
@@ -41,7 +41,6 @@
   align-items: center;
   box-sizing: content-box;
   padding: 10px 5px 10px 5px;
-  border: 1px solid #ffff;
   transition: $trn;
   box-sizing: border-box;
   &:hover {

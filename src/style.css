@@ -338,7 +338,7 @@ h1, h2, h3, h4, h5, h6 {
 .project-section {
   height: 80%;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: 1;
 }
 .project-section.section {
@@ -368,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 550px) {
   .project_card-wrapper {
-    overflow: hidden;
+    overflow-x: hidden;
     justify-content: start;
     width: 100vw;
   }
@@ -386,7 +386,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   box-sizing: content-box;
   padding: 10px 5px 10px 5px;
-  border: 1px solid white;
   transition: transform 0.3s ease;
   box-sizing: border-box;
 }
