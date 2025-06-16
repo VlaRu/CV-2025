@@ -27,12 +27,12 @@ body {
 }
 
 .main-section {
- height: 95vh;
+ height: 100dvh;
  width: 100%;
  @include place(row,center,center);
  padding: 10px 20px;
  @media (max-width: $tablet-pro){
-  height: fit-content;
+  height: auto;
   @include place(column,start,start);
   padding: 0;
  }
@@ -128,7 +128,7 @@ body {
   -webkit-text-fill-color: transparent;
   overflow: hidden; /* Ensure the animation works */
   white-space: normal; /* Allow text wrapping */
-  animation: revealText 2s ease-in-out forwards; 
+  animation: revealText 2s ease-in-out forwards;
   @media (max-width: $mobile) {
     font-size: 20px;
     margin: 0 10px;
